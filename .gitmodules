@@ -1,0 +1,3 @@
+[submodule "theTrain_UnityProj/Assets/Tools"]
+	path = theTrain_UnityProj/Assets/Tools
+	url = https://github.com/miajardine1/ScriptingTools
