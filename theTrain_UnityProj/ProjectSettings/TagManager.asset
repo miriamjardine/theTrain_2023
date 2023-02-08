@@ -11,14 +11,14 @@ TagManager:
   - Player
   - Water
   - UI
-  - Player Interaction
+  - PickupInteraction
   - Pickup
   - Floor
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerOnly Colliders
+  - PushInteraction
+  - Push
+  - Obstacle
+  - Trigger
   - 
   - 
   - 
