@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Hanging Light Fixture.ma
-//Last modified: Mon, Mar 13, 2023 04:24:49 PM
+//Last modified: Mon, Mar 13, 2023 06:53:29 PM
 //Codeset: 1252
 file -rdi 1 -ns "LightFixture_Hanging" -rfn "LightFixture_HangingRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Miriam/Documents/Github/Maya Models/Train Models/LightFixture_Hanging.ma";
@@ -9,25 +9,26 @@ file -r -ns "LightFixture_Hanging" -dr 1 -rfn "LightFixture_HangingRN" -op "v=0;
 requires maya "2023";
 requires "mtoa" "5.1.2";
 requires "stereoCamera" "10.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "D696F3A7-4D22-888F-A199-5E87647FC394";
+fileInfo "UUID" "C615D6E6-4035-FFB7-62AD-7DB02E9BD3AB";
 createNode transform -n "GEO";
 	rename -uid "E7C704ED-4EC5-25C9-740D-418694484D07";
 createNode transform -s -n "persp";
 	rename -uid "D4FBB3C8-44AD-3FE1-DA74-009C71E78431";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.973284630342755 4.395406605943017 -1.7057845759016304 ;
-	setAttr ".r" -type "double3" 2.6616472694863735 457.79999999959415 0 ;
+	setAttr ".t" -type "double3" 1.3330541139942569 1.6789796134542272 0.10149210724833141 ;
+	setAttr ".r" -type "double3" -5.7383527305124895 439.79999999958699 -2.2450795842121905e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D0631324-4389-2A6F-9B66-869E7CFAD973";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 11.030332374044491;
+	setAttr ".coi" 2.9840876851620139;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -101,15 +102,17 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode reference -n "LightFixture_HangingRN";
 	rename -uid "8D6EAEAE-41D1-B83E-2EF0-D7BB433F9057";
-	setAttr -s 4 ".phl";
+	setAttr -s 6 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
 	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LightFixture_HangingRN"
 		"LightFixture_HangingRN" 0
-		"LightFixture_HangingRN" 18
+		"LightFixture_HangingRN" 20
 		0 "|LightFixture_Hanging:HangingLight_Geo" "|Hanging_Lighting_Fixture" "-s -r "
 		
 		2 "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo" "visibility" 
@@ -128,7 +131,7 @@ createNode reference -n "LightFixture_HangingRN";
 		" -type \"double3\" 5.9270788443148934 0.44347002501106658 -0.030636588567551224"
 		
 		2 "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo|LightFixture_Hanging:HangingLight_GeoShape" 
-		"uvPivot" " -type \"double2\" 0.49952872271027871 0.1782811414450407"
+		"uvPivot" " -type \"double2\" 0.56367900967597961 0.3645569235086441"
 		2 "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo|LightFixture_Hanging:HangingLight_GeoShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo|LightFixture_Hanging:HangingLight_GeoShape" 
@@ -149,8 +152,12 @@ createNode reference -n "LightFixture_HangingRN";
 		"LightFixture_HangingRN.placeHolderList[2]" ""
 		5 3 "LightFixture_HangingRN" "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo|LightFixture_Hanging:HangingLight_GeoShape.worldMatrix" 
 		"LightFixture_HangingRN.placeHolderList[3]" ""
+		5 3 "LightFixture_HangingRN" "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo|LightFixture_Hanging:HangingLight_GeoShape.worldMatrix" 
+		"LightFixture_HangingRN.placeHolderList[4]" ""
+		5 3 "LightFixture_HangingRN" "|Hanging_Lighting_Fixture|LightFixture_Hanging:HangingLight_Geo|LightFixture_Hanging:HangingLight_GeoShape.worldMatrix" 
+		"LightFixture_HangingRN.placeHolderList[5]" ""
 		5 3 "LightFixture_HangingRN" "LightFixture_Hanging:groupParts3.outputGeometry" 
-		"LightFixture_HangingRN.placeHolderList[4]" "LightFixture_Hanging:HangingLight_GeoShape.i";
+		"LightFixture_HangingRN.placeHolderList[6]" "LightFixture_Hanging:HangingLight_GeoShape.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyTweakUV -n "LightFixture_Hanging:polyTweakUV7";
@@ -1123,19 +1130,19 @@ createNode polyPlanarProj -n "polyPlanarProj1";
 	setAttr ".prgt" 627;
 	setAttr ".ptop" 683;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "826CF930-4D88-E534-44C8-05874A0B6FBD";
+	rename -uid "9E58A395-4652-92EB-CF3A-8D8EE7B4C35F";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9C493E9A-42F8-2BD0-C195-8DBAD7FB1866";
+	rename -uid "80388DF3-4243-1EA7-53B9-59AFB855E3A0";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C5256CF4-42D4-1A90-F3C4-2BA5D9287B31";
+	rename -uid "F58A7C9D-4B0C-D4F4-83E3-F4B8E3523668";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "448E5945-4426-842B-B999-57BA9DE860EA";
+	rename -uid "B5F96A14-4B4A-E3A7-04C5-95B6FCE430A2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F401ADD6-4286-90C8-D2DF-208E8D714F67";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F4CD23EE-4358-D00C-657E-A687A179AE59";
+	rename -uid "08D79CF5-465C-9CA9-D613-C4ADE42C1CD0";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8F51C48F-471D-C760-47BD-AEB7E54348BA";
 	setAttr ".g" yes;
@@ -1435,6 +1442,118 @@ createNode polyTweakUV -n "polyTweakUV1";
 		 -0.33606675 0.12086678 -0.33606675 -0.067428559 -0.33606675 0.030693829 -0.34486327
 		 0.12086678 -0.34486327 -0.067428559 -0.34486327 0.030693829 -0.35365978 0.12086678
 		 -0.35365978 -0.067428559 -0.35365978;
+createNode polyMapCut -n "polyMapCut1";
+	rename -uid "563A804B-4F0A-CA99-19A5-27AD76B6B69E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 6 "e[27]" "e[32]" "e[37]" "e[42]" "e[47]" "e[52]";
+createNode polyMapCut -n "polyMapCut2";
+	rename -uid "0D87C6E5-4621-91A8-9361-728E379197AD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[53]";
+createNode polyMapCut -n "polyMapCut3";
+	rename -uid "0C4F47AC-4762-0146-6E99-99BDC50E28D7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:3]";
+createNode polyMapCut -n "polyMapCut4";
+	rename -uid "1FD65A8C-4981-4AA8-4975-3890AC0EB19A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:3]";
+createNode polyMapCut -n "polyMapCut5";
+	rename -uid "0A54FAEB-4240-C2E9-1341-9FBED84DAF64";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[16:19]";
+createNode polyCylProj -n "polyCylProj1";
+	rename -uid "6462B9C5-48CF-F9F0-3CF0-E7BA68E40216";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0:23]" "f[223:224]";
+	setAttr ".ix" -type "matrix" 2.4999999999999996 0 0 0 0 2.4999999999999996 0 0 0 0 2.4999999999999996 0
+		 0.10116995434913711 0 0.074735326068864238 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.046757757663726807 0.78826232254505157 0.023674637079238892 ;
+	setAttr ".ps" -type "double2" 180 1.2308174073696136 ;
+	setAttr ".r" 0.3539353609085083;
+createNode polyAutoProj -n "LightFixture_Hanging:polyAutoProj1";
+	rename -uid "F949BD12-4B20-930D-2AA3-378342492FD2";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0:23]" "f[223:224]";
+	setAttr ".ix" -type "matrix" 2.4999999999999996 0 0 0 0 2.4999999999999996 0 0 0 0 2.4999999999999996 0
+		 0.10116995434913711 0 0.074735326068864238 1;
+	setAttr ".s" -type "double3" 1.2308174371719358 1.2308174371719358 1.2308174371719358 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "LightFixture_Hanging:polyTweakUV8";
+	rename -uid "1AC4E779-4BCE-1FC7-3A5D-FB9F69F79554";
+	setAttr ".uopa" yes;
+	setAttr -s 69 ".uvtk";
+	setAttr ".uvtk[326]" -type "float2" 0.039496969 0.012799196 ;
+	setAttr ".uvtk[327]" -type "float2" -0.12387223 0.0084278807 ;
+	setAttr ".uvtk[328]" -type "float2" -0.15654254 -0.048156805 ;
+	setAttr ".uvtk[329]" -type "float2" 0.038252186 -0.052527823 ;
+	setAttr ".uvtk[330]" -type "float2" -0.19707894 0.13522491 ;
+	setAttr ".uvtk[331]" -type "float2" -0.26241773 0.13522491 ;
+	setAttr ".uvtk[332]" -type "float2" -0.12387223 0.26202187 ;
+	setAttr ".uvtk[333]" -type "float2" -0.15654254 0.31860691 ;
+	setAttr ".uvtk[334]" -type "float2" 0.039496969 0.25765088 ;
+	setAttr ".uvtk[335]" -type "float2" 0.038252186 0.3229779 ;
+	setAttr ".uvtk[336]" -type "float2" -0.090868257 -0.056176074 ;
+	setAttr ".uvtk[337]" -type "float2" -0.28566259 -0.060547061 ;
+	setAttr ".uvtk[338]" -type "float2" -0.25299224 -0.11713142 ;
+	setAttr ".uvtk[339]" -type "float2" -0.089622699 -0.12150309 ;
+	setAttr ".uvtk[340]" -type "float2" -0.39153808 -0.24392876 ;
+	setAttr ".uvtk[341]" -type "float2" -0.32619864 -0.24392876 ;
+	setAttr ".uvtk[342]" -type "float2" -0.28566259 -0.42731044 ;
+	setAttr ".uvtk[343]" -type "float2" -0.25299224 -0.37072542 ;
+	setAttr ".uvtk[344]" -type "float2" -0.090868257 -0.43168139 ;
+	setAttr ".uvtk[345]" -type "float2" -0.089622699 -0.36635441 ;
+	setAttr ".uvtk[346]" -type "float2" -0.027428556 -0.18297306 ;
+	setAttr ".uvtk[347]" -type "float2" -0.027428556 -0.28147754 ;
+	setAttr ".uvtk[348]" -type "float2" 0.029156283 -0.30977002 ;
+	setAttr ".uvtk[349]" -type "float2" 0.029156283 -0.18297306 ;
+	setAttr ".uvtk[350]" -type "float2" -0.084014617 -0.18297306 ;
+	setAttr ".uvtk[351]" -type "float2" -0.084014617 -0.30977002 ;
+	setAttr ".uvtk[352]" -type "float2" -0.027428556 -0.084468581 ;
+	setAttr ".uvtk[353]" -type "float2" 0.029156283 -0.056176074 ;
+	setAttr ".uvtk[354]" -type "float2" -0.084014617 -0.056176074 ;
+	setAttr ".uvtk[355]" -type "float2" 0.1588566 0.11130301 ;
+	setAttr ".uvtk[356]" -type "float2" 0.1588566 0.29468471 ;
+	setAttr ".uvtk[357]" -type "float2" 0.10227173 0.32297757 ;
+	setAttr ".uvtk[358]" -type "float2" 0.10227173 0.11130301 ;
+	setAttr ".uvtk[359]" -type "float2" 0.04568572 0.29468471 ;
+	setAttr ".uvtk[360]" -type "float2" 0.04568572 0.11130301 ;
+	setAttr ".uvtk[361]" -type "float2" 0.1588566 -0.072078653 ;
+	setAttr ".uvtk[362]" -type "float2" 0.10227173 -0.10037214 ;
+	setAttr ".uvtk[363]" -type "float2" 0.04568572 -0.072078653 ;
+	setAttr ".uvtk[364]" -type "float2" 0.34181806 -0.30754253 ;
+	setAttr ".uvtk[365]" -type "float2" 0.51889604 -0.30754253 ;
+	setAttr ".uvtk[366]" -type "float2" 0.51889604 0.3229779 ;
+	setAttr ".uvtk[367]" -type "float2" 0.34181806 0.3229779 ;
+	setAttr ".uvtk[368]" -type "float2" 0.16473952 -0.30754253 ;
+	setAttr ".uvtk[369]" -type "float2" 0.16473952 0.3229779 ;
+	setAttr ".uvtk[370]" -type "float2" 0.3289088 -0.31119096 ;
+	setAttr ".uvtk[371]" -type "float2" 0.3289088 -0.458848 ;
+	setAttr ".uvtk[372]" -type "float2" 0.38549373 -0.47518224 ;
+	setAttr ".uvtk[373]" -type "float2" 0.38549373 -0.31181303 ;
+	setAttr ".uvtk[374]" -type "float2" 0.27232289 -0.31181303 ;
+	setAttr ".uvtk[375]" -type "float2" 0.27232289 -0.47518224 ;
+	setAttr ".uvtk[376]" -type "float2" 0.44768789 -0.32752517 ;
+	setAttr ".uvtk[377]" -type "float2" 0.44768789 -0.47518224 ;
+	setAttr ".uvtk[378]" -type "float2" 0.50427276 -0.47456014 ;
+	setAttr ".uvtk[379]" -type "float2" 0.50427276 -0.31119129 ;
+	setAttr ".uvtk[380]" -type "float2" 0.3911019 -0.31119129 ;
+	setAttr ".uvtk[381]" -type "float2" 0.3911019 -0.47456014 ;
+	setAttr ".uvtk[382]" -type "float2" 0.14793554 -0.31515127 ;
+	setAttr ".uvtk[383]" -type "float2" 0.14793554 -0.12035624 ;
+	setAttr ".uvtk[384]" -type "float2" 0.091350608 -0.10402108 ;
+	setAttr ".uvtk[385]" -type "float2" 0.091350608 -0.3145279 ;
+	setAttr ".uvtk[386]" -type "float2" 0.034764662 -0.12035624 ;
+	setAttr ".uvtk[387]" -type "float2" 0.034764662 -0.31515127 ;
+	setAttr ".uvtk[388]" -type "float2" 0.26671475 -0.50598568 ;
+	setAttr ".uvtk[389]" -type "float2" 0.26671475 -0.31119096 ;
+	setAttr ".uvtk[390]" -type "float2" 0.21012989 -0.31181404 ;
+	setAttr ".uvtk[391]" -type "float2" 0.21012989 -0.52232087 ;
+	setAttr ".uvtk[392]" -type "float2" 0.15354383 -0.31119096 ;
+	setAttr ".uvtk[393]" -type "float2" 0.15354383 -0.50598568 ;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -1476,11 +1595,15 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "transformGeometry1.og" "LightFixture_HangingRN.phl[1]";
-connectAttr "LightFixture_Hanging:polyTweakUV7.uvtk[0]" "LightFixture_HangingRN.phl[2]"
+connectAttr "LightFixture_Hanging:polyTweakUV8.out" "LightFixture_HangingRN.phl[1]"
 		;
-connectAttr "LightFixture_HangingRN.phl[3]" "polyPlanarProj1.mp";
-connectAttr "LightFixture_HangingRN.phl[4]" "polyPlanarProj1.ip";
+connectAttr "LightFixture_Hanging:polyTweakUV8.uvtk[0]" "LightFixture_HangingRN.phl[2]"
+		;
+connectAttr "LightFixture_HangingRN.phl[3]" "polyCylProj1.mp";
+connectAttr "LightFixture_HangingRN.phl[4]" "polyPlanarProj1.mp";
+connectAttr "LightFixture_HangingRN.phl[5]" "LightFixture_Hanging:polyAutoProj1.mp"
+		;
+connectAttr "LightFixture_HangingRN.phl[6]" "polyPlanarProj1.ip";
 connectAttr "polyTweakUV1.out" "pCylinderShape1.i";
 connectAttr "polyTweakUV1.uvtk[0]" "pCylinderShape1.uvst[0].uvtw";
 connectAttr "LightFixture_Hanging:polyLayoutUV1.out" "LightFixture_Hanging:polyTweakUV7.ip"
@@ -1541,6 +1664,15 @@ connectAttr "polyTweak1.out" "transformGeometry1.ig";
 connectAttr "polyCylinder1.out" "polyAutoProj1.ip";
 connectAttr "pCylinderShape1.wm" "polyAutoProj1.mp";
 connectAttr "polyAutoProj1.out" "polyTweakUV1.ip";
+connectAttr "transformGeometry1.og" "polyMapCut1.ip";
+connectAttr "polyMapCut1.out" "polyMapCut2.ip";
+connectAttr "polyMapCut2.out" "polyMapCut3.ip";
+connectAttr "polyMapCut3.out" "polyMapCut4.ip";
+connectAttr "polyMapCut4.out" "polyMapCut5.ip";
+connectAttr "polyMapCut5.out" "polyCylProj1.ip";
+connectAttr "polyCylProj1.out" "LightFixture_Hanging:polyAutoProj1.ip";
+connectAttr "LightFixture_Hanging:polyAutoProj1.out" "LightFixture_Hanging:polyTweakUV8.ip"
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Hanging Light Fixture.ma
