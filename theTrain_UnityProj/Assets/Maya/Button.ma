@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Button.ma
-//Last modified: Wed, Mar 29, 2023 02:25:29 AM
+//Last modified: Wed, Mar 29, 2023 03:13:10 AM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -13,17 +13,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "FC5C05F0-48FC-6F9C-17C3-6ABF1C50A384";
+fileInfo "UUID" "5D156AA8-4259-0BBA-D160-DE9A4024E606";
 createNode transform -s -n "persp";
 	rename -uid "171BDCE4-44E0-62AC-D9F2-5E9D0FDA5E59";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.5174861250636198 -1.6254404617777154 -0.74082417995223337 ;
+	setAttr ".t" -type "double3" 5.4156143248569864 -1.9862820479564494 -0.78789308441479411 ;
 	setAttr ".r" -type "double3" 21.861647270394613 92.9999999999946 5.0888874903416268e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6FE0CF0D-43BF-54FF-7498-4B9E348C6836";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 3.9785778453890104;
+	setAttr ".coi" 4.9476270677442864;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
