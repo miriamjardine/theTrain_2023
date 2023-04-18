@@ -9748,6 +9748,7 @@ GameObject:
   - component: {fileID: 1243343590}
   - component: {fileID: 1243343589}
   - component: {fileID: 1243343588}
+  - component: {fileID: 1243343592}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -9816,6 +9817,9 @@ MonoBehaviour:
   speed: 3.5
   jumpHeight: 3.5
   gravity: 7.5
+  onQKey:
+    m_PersistentCalls:
+      m_Calls: []
   horizontalInput: 0
 --- !u!143 &1243343591
 CharacterController:
@@ -9835,6 +9839,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1243343592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243343586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b5deff4607d3c49a40bd98afc21175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  touchStartPosition: {x: 0, y: 0}
+  touchEndPosition: {x: 0, y: 0}
+  playerStartPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1254499094
 PrefabInstance:
   m_ObjectHideFlags: 0
