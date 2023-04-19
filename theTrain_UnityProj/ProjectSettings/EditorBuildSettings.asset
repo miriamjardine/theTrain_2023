@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cab1.unity
     guid: bc82bc3f8275c5e4b9b54d7616df85ec
+  - enabled: 1
+    path: Assets/Scenes/Success.unity
+    guid: 9d514afab80e496499610a0d387c280b
   m_configObjects: {}
