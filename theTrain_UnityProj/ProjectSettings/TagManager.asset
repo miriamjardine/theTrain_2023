@@ -19,7 +19,7 @@ TagManager:
   - Push
   - Obstacle
   - Trigger
-  - LightColliders
+  - NoPickupInteraction
   - 
   - 
   - 
