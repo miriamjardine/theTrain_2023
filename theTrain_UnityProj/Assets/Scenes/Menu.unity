@@ -570,7 +570,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.050943315, g: 0.96993446, b: 1, a: 1}
+  m_Color: {r: 0.0043501537, g: 0.0013349979, b: 0.2830189, a: 1}
   m_Intensity: 1
   m_Range: 40
   m_SpotAngle: 30
@@ -610,7 +610,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 40, y: 20}
   m_BounceIntensity: 1
@@ -1081,7 +1081,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Cab1
+          m_StringArgument: Cab2
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1128725872}
@@ -1259,7 +1259,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
